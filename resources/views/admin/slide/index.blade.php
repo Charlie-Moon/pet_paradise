@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('page-title', __('Service'))
-@section('page-heading', __('Service'))
+@section('page-title', __('Slide'))
+@section('page-heading', __('Slide'))
 
 @section('breadcrumbs')
     <li class="breadcrumb-item active">
-        Service
+        Slide
     </li>
 @stop
 

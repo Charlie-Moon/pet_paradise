@@ -1,35 +1,40 @@
 @extends('layouts.app')
 
-@section('page-title', __('Service'))
-@section('page-heading', __('Service'))
+@section('page-title', __('Products'))
+@section('page-heading', __('Products'))
 
 @section('breadcrumbs')
     <li class="breadcrumb-item active">
-        Service
+        Products
     </li>
 @stop
 
 @section('content')
-<div class="table-resonsive-sm">
-  <table class="table table-light">
+<a href="#" class="btn btn-primary mb-4"><i class="fa fa-plus me-2"></i>Add New</a>
+<div class="table-responsive-sm">
+  <table class="table table-bordered table-light">
+    <thead>
+      <tr>
+        <th class="text-center" width="50px">ID</th>
+        <th>Title</th>
+        <th class="text-center">Action</th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <td>ID</td>
-        <td>Title</td>
-        <td>Action</td>
-      </tr>
-      <tr>
-        <td>
+        <td class="text-center">
           1
         </td>
         <td>
-
+          <div class="line-clamp-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ratione iste dolorum inventore facere eius repellat natus doloremque numquam et? Ullam laudantium hic quisquam itaque ducimus explicabo dignissimos molestiae harum.
+          </div>
         </td>
         <td>
           <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary">Left</button>
-            <button type="button" class="btn btn-primary">Middle</button>
-            <button type="button" class="btn btn-primary">Right</button>
+            <a href="#" type="button" class="btn btn-outline-primary"><i class="fa fa-eye"></i></a>
+            <a href="#" type="button" class="btn btn-outline-primary"><i class="fas fa-edit"></i></a>
+            <a href="#" type="button" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
           </div>
         </td>
       </tr>
@@ -37,17 +42,17 @@
     </tbody>
     <tfoot>
       <tr>
-        <th>
+        <th colspan="3">
           <nav aria-label="Page navigation">
-            <ul class="pagination">
+            <ul class="pagination mb-0 py-2">
               <li class="page-item active" aria-current="page">
-                <a class="page-link" href="#">Page 1 <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Page 2</a>
+                <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
               </li>
               <li class="page-item">
-                <a class="page-link" href="#">Page 3</a>
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
               </li>
             </ul>
           </nav>
@@ -57,15 +62,4 @@
   </table>
  
 </div>
-@endsection
-
-@section('scripts')
-
-<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-       $('.ckeditor').ckeditor();
-    });
-</script>
-    
 @endsection

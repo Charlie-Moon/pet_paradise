@@ -39,13 +39,18 @@ Route::group(['middleware' => 'auth'], function () {
     Route::impersonate();
 });
 
+/**
+ * Public Routes
+ */
+Route::get('/', 'HomeController@index')->name('home');
+
 Route::group(['middleware' => ['auth', 'verified']], function () {
 
     /**
      * Dashboard
      */
 
-    Route::get('/', 'DashboardController@index')->name('dashboard');
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 
     /**
@@ -53,6 +58,8 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
      */
     Route::get('/services', 'ServiceController@index')->name('service');
     Route::get('/products', 'ProductController@index')->name('product');
+    Route::get('/slides', 'SlideController@index')->name('slide');
+    Route::get('/contacts', 'ContactController@index')->name('contact');
 
     /**
      * User Profile

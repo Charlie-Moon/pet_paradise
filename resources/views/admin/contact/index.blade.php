@@ -1,16 +1,15 @@
 @extends('layouts.app')
 
-@section('page-title', __('Service'))
-@section('page-heading', __('Service'))
+@section('page-title', __('Contacts'))
+@section('page-heading', __('Contacts'))
 
 @section('breadcrumbs')
     <li class="breadcrumb-item active">
-        Service
+        Contacts
     </li>
 @stop
 
 @section('content')
-<a href="#" class="btn btn-primary mb-4"><i class="fa fa-plus me-2"></i>Add New</a>
 <div class="table-responsive-sm">
   <table class="table table-bordered table-light">
     <thead>

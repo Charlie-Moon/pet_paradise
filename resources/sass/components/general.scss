@@ -5,7 +5,6 @@
 .content-page {
      margin-left: 250px;
      overflow: hidden;
-     width: calc(100% - 250px);
  }
 
 .sidebar-collapsed .content-page {
@@ -15,9 +14,22 @@
 label {
   font-weight: 500;
 }
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
 @include media-breakpoint-down(md) {
   .content-page {
     margin-left: 0;
+  }
+}
+@include media-breakpoint-up(md) {
+  .content-page {
+    width: calc(100% - 250px);
   }
 }
 @include media-breakpoint-between(lg, xl) {

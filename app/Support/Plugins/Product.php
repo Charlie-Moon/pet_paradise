@@ -9,10 +9,9 @@ class Product extends Plugin
 {
     public function sidebar()
     {
-        return Item::create(__('Product'))
+        return Item::create(__('Products'))
             ->route('product')
-            ->icon('fas fa-users')
+            ->icon('fas fa-box')
             ->active("product*");
-            // ->permissions('users.manage');
     }
 }

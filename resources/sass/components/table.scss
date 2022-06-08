@@ -1,5 +1,10 @@
-.table thead th {
-  color: $gray-700;
+.table {
+  thead th {
+    color: $gray-700;
+  }
+  th, td {
+    padding: .9rem .7rem;
+  }
 }
 
 .table-striped tr {
