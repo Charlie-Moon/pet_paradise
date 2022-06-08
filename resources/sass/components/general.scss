@@ -1,0 +1,33 @@
+[role="main"] {
+  padding-top: 95px;
+}
+
+.content-page {
+     margin-left: 250px;
+     overflow: hidden;
+     width: calc(100% - 250px);
+ }
+
+.sidebar-collapsed .content-page {
+    margin-left: 80px;
+}
+
+label {
+  font-weight: 500;
+}
+@include media-breakpoint-down(md) {
+  .content-page {
+    margin-left: 0;
+  }
+}
+@include media-breakpoint-between(lg, xl) {
+  .widget {
+    height: 128px;
+
+    .row .text-muted {
+      width: 80px;
+      text-align: right;
+      word-wrap: normal;
+    }
+  }
+}
