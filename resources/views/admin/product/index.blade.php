@@ -10,7 +10,7 @@
 @stop
 
 @section('content')
-<a href="#" class="btn btn-primary mb-4"><i class="fa fa-plus me-2"></i>Add New</a>
+<a href="{{ route('product.add')}}" class="btn btn-primary mb-4"><i class="fa fa-plus me-2"></i>Add New</a>
 <div class="table-responsive-sm">
   <table class="table table-bordered table-light">
     <thead>

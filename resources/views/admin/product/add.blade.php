@@ -12,11 +12,11 @@
 @section('content')
 <div class="row justify-content-between">
   <div class="col-md-8">
-    <form class="row g-3">
-
+    <form class="row g-3" action="{{ route('product.store')}}"  method="POST">
+      @csrf
       <div class="col-md-12">
         <label for="product-title" class="form-label">Title</label>
-        <input type="email" class="form-control bg-white" name="serviceTitle" id="product-title">
+        <input type="text" class="form-control bg-white" name="serviceTitle" id="product-title">
       </div>
 
       <div class="col-12">

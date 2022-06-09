@@ -3,7 +3,9 @@
 @section('page-title', __('Pet Paradise - Products'))
 
 @section('content')
-<div class="container">
-	
-</div>
+	<div class="container">
+
+		@include('front.partials.product')
+		
+	</div>
 @endsection

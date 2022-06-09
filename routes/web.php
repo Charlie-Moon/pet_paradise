@@ -57,7 +57,11 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
      * Addon Admin Page
      */
     Route::get('/services', 'ServiceController@index')->name('service');
+
     Route::get('/products', 'ProductController@index')->name('product');
+    Route::get('/products/add', 'ProductController@add')->name('product.add');
+    Route::post('/products/store', 'ProductController@store')->name('product.store');
+
     Route::get('/slides', 'SlideController@index')->name('slide');
     Route::get('/contacts', 'ContactController@index')->name('contact');
 
