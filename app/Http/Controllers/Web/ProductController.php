@@ -13,6 +13,7 @@ class ProductController extends Controller
      *
      * @return Factory|View
      */
+
     public function index()
     {
         if (session()->has('verified')) {
