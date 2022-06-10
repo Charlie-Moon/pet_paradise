@@ -32,18 +32,29 @@
                       {{ $item->serviceTitle}}
                   </div>
                 </td>
-                <td>
+                <td width="200px">
                   <div class="btn-group" role="group" aria-label="Basic example">
                     <a href="#" type="button" class="btn btn-outline-primary"><i class="fa fa-eye"></i></a>
                     <a href="{{ route('product.add',["id"=>$item->id]) }}" type="button" class="btn btn-outline-primary"><i class="fas fa-edit"></i></a>
-                    <a href="{{ route('product.delete',['id'=>$item->id]) }}" type="button" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                    <a href="#" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-trash"></i></a>
+                  </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-sm">
+                      <div class="modal-content">
+                        <div class="modal-header border-0">
+                          <h5 class="modal-title" id="exampleModalLabel"><a href="{{ route('product.delete',['id'=>$item->id]) }}" type="button" class="btn btn-outline-danger">Confirm delete!</a></h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </td>
               </tr>
         @endforeach
 
     </tbody>
-    <tfoot>
+    {{-- <tfoot>
       <tr>
         <th colspan="3">
           <nav aria-label="Page navigation">
@@ -61,7 +72,7 @@
           </nav>
         </th>
       </tr>
-    </tfoot>
+    </tfoot> --}}
   </table>
 
 </div>

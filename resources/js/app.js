@@ -1,2 +1,2 @@
-require('./bootstrap');
-import bootstrap from 'bootstrap';
+require("./bootstrap");
+const bootstrap = require("bootstrap");
