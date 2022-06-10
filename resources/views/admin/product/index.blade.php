@@ -11,6 +11,7 @@
 
 @section('content')
 <a href="{{ route('product.add')}}" class="btn btn-primary mb-4"><i class="fa fa-plus me-2"></i>Add New</a>
+@include('partials.messages')
 <div class="table-responsive-sm">
   <table class="table table-bordered table-light">
     <thead>
@@ -21,23 +22,25 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="text-center">
-          1
-        </td>
-        <td>
-          <div class="line-clamp-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ratione iste dolorum inventore facere eius repellat natus doloremque numquam et? Ullam laudantium hic quisquam itaque ducimus explicabo dignissimos molestiae harum.
-          </div>
-        </td>
-        <td>
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <a href="#" type="button" class="btn btn-outline-primary"><i class="fa fa-eye"></i></a>
-            <a href="#" type="button" class="btn btn-outline-primary"><i class="fas fa-edit"></i></a>
-            <a href="#" type="button" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
-          </div>
-        </td>
-      </tr>
+        @foreach($products as $item)
+            <tr>
+                <td class="text-center">
+                  {{ $loop->iteration }}
+                </td>
+                <td>
+                  <div class="line-clamp-3">
+                      {{ $item->serviceTitle}}
+                  </div>
+                </td>
+                <td>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <a href="#" type="button" class="btn btn-outline-primary"><i class="fa fa-eye"></i></a>
+                    <a href="{{ route('product.add',["id"=>$item->id]) }}" type="button" class="btn btn-outline-primary"><i class="fas fa-edit"></i></a>
+                    <a href="{{ route('product.delete',['id'=>$item->id]) }}" type="button" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+        @endforeach
 
     </tbody>
     <tfoot>
@@ -60,6 +63,6 @@
       </tr>
     </tfoot>
   </table>
- 
+
 </div>
 @endsection

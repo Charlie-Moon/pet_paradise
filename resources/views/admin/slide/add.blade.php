@@ -12,16 +12,17 @@
 @section('content')
 <div class="row justify-content-between">
   <div class="col-md-8">
-    <form class="row g-3">
-
+    <form class="row g-3" action="{{ route('slides.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <input type="hidden" value="{{ $slide->id }}" name="id">
       <div class="col-md-12">
         <label for="service-title" class="form-label">Title</label>
-        <input type="email" class="form-control bg-white" name="serviceTitle" id="service-title">
+        <input value="{{ $slide->serviceTitle }}" type="text" class="form-control bg-white" name="serviceTitle" id="service-title">
       </div>
 
       <div class="col-md-6">
         <label for="service-excerpt" class="form-label">Excerpt</label>
-        <input type="text" class="form-control bg-white" name="serviceExcerpt" id="service-excerpt">
+        <input type="text" class="form-control bg-white" value="{{ $slide->serviceExcerpt }}" name="serviceExcerpt" id="service-excerpt">
       </div>
 
      <div class="col-md-6">
@@ -31,13 +32,8 @@
      <div class="col-md-3">
       <button type="submit" class="btn btn-primary text-white w-100">Punlish</button>
      </div>
-    
+
     </form>
   </div>
-  {{-- <div class="col-md-3 post-side">
-    <div class="bg-side bg-gradient h-100 p-4">
-      <button type="submit" class="btn btn-primary text-white">Punlish</button>
-    </div>
-  </div> --}}
 </div>
 @endsection

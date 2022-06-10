@@ -57,12 +57,21 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
      * Addon Admin Page
      */
     Route::get('/services', 'ServiceController@index')->name('service');
+    Route::get('/services/add/{id?}', 'ServiceController@add')->name('services.add');
+    Route::post('/services/store', 'ServiceController@store')->name('services.store');
+    Route::get('/services/delete/{id}', 'ServiceController@delete')->name('services.delete');
 
     Route::get('/products', 'ProductController@index')->name('product');
-    Route::get('/products/add', 'ProductController@add')->name('product.add');
+    Route::get('/products/add/{id?}', 'ProductController@add')->name('product.add');
     Route::post('/products/store', 'ProductController@store')->name('product.store');
+    Route::get('/products/delete/{id}', 'ProductController@delete')->name('product.delete');
 
     Route::get('/slides', 'SlideController@index')->name('slide');
+    Route::get('/slides/add/{id?}', 'SlideController@add')->name('slides.add');
+    Route::post('/slides/store', 'SlideController@store')->name('slides.store');
+    Route::get('/slides/delete/{id}', 'SlideController@delete')->name('slides.delete');
+
+
     Route::get('/contacts', 'ContactController@index')->name('contact');
 
     /**
