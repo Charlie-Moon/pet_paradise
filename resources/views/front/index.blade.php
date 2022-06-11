@@ -27,9 +27,9 @@
 		</div>
 
 		<div class="row row-cols-1 row-cols-md-4">
-            @foreach($service as $item)
+
 			    @include('front.partials.service')
-            @endforeach
+
 
 		</div>
 

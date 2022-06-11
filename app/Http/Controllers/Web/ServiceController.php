@@ -61,7 +61,7 @@ class ServiceController extends Controller
     }
 
     public function delete($id){
-        $product = SlideModel::find($id);
+        $product = ServiceModel::find($id);
         $product->delete();
         return redirect(route('service'));
     }

@@ -43,6 +43,7 @@ Route::group(['middleware' => 'auth'], function () {
  * Public Routes
  */
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/products', 'ProductController@index')->name('home.products');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
 
@@ -50,29 +51,29 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
      * Dashboard
      */
 
-    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('/admin/dashboard', 'DashboardController@index')->name('dashboard');
 
 
     /**
      * Addon Admin Page
      */
-    Route::get('/services', 'ServiceController@index')->name('service');
-    Route::get('/services/add/{id?}', 'ServiceController@add')->name('services.add');
-    Route::post('/services/store', 'ServiceController@store')->name('services.store');
-    Route::get('/services/delete/{id}', 'ServiceController@delete')->name('services.delete');
+    Route::get('/admin/services', 'ServiceController@index')->name('service');
+    Route::get('/admin/services/add/{id?}', 'ServiceController@add')->name('services.add');
+    Route::post('/admin/services/store', 'ServiceController@store')->name('services.store');
+    Route::get('/admin/services/delete/{id}', 'ServiceController@delete')->name('services.delete');
 
-    Route::get('/products', 'ProductController@index')->name('product');
-    Route::get('/products/add/{id?}', 'ProductController@add')->name('product.add');
-    Route::post('/products/store', 'ProductController@store')->name('product.store');
-    Route::get('/products/delete/{id}', 'ProductController@delete')->name('product.delete');
+    Route::get('/admin/products', 'ProductController@index')->name('product');
+    Route::get('/admin/products/add/{id?}', 'ProductController@add')->name('product.add');
+    Route::post('/admin/products/store', 'ProductController@store')->name('product.store');
+    Route::get('/admin/products/delete/{id}', 'ProductController@delete')->name('product.delete');
 
-    Route::get('/slides', 'SlideController@index')->name('slide');
-    Route::get('/slides/add/{id?}', 'SlideController@add')->name('slides.add');
-    Route::post('/slides/store', 'SlideController@store')->name('slides.store');
-    Route::get('/slides/delete/{id}', 'SlideController@delete')->name('slides.delete');
+    Route::get('/admin/slides', 'SlideController@index')->name('slide');
+    Route::get('/admin/slides/add/{id?}', 'SlideController@add')->name('slides.add');
+    Route::post('/admin/slides/store', 'SlideController@store')->name('slides.store');
+    Route::get('/admin/slides/delete/{id}', 'SlideController@delete')->name('slides.delete');
 
 
-    Route::get('/contacts', 'ContactController@index')->name('contact');
+    Route::get('/admin/contacts', 'ContactController@index')->name('contact');
 
     /**
      * User Profile

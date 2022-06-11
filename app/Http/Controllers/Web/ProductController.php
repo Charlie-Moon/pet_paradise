@@ -62,4 +62,9 @@ class ProductController extends Controller
         $product->delete();
         return redirect(route('product'));
     }
+    
+    public function front() {
+        $product = ProductModel::all();
+        return view('front.products.index',compact('product'));
+    }
 }
