@@ -76,3 +76,7 @@
 	</div>
 </footer>
 @endsection
+
+@section('scripts')
+
+@endsection
