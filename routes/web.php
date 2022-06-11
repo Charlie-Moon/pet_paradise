@@ -43,7 +43,8 @@ Route::group(['middleware' => 'auth'], function () {
  * Public Routes
  */
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/products', 'ProductController@index')->name('home.products');
+Route::get('/products', 'HomeController@product')->name('home.products');
+Route::get('/service', 'HomeController@service')->name('home.service');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
 

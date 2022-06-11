@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse shadow-none bg-transparent" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="{{ route('home.service') }}">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
+          <a class="nav-link" href="{{ route('home.products') }}">Products</a>
         </li>
       </ul>
     </div>

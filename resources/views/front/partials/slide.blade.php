@@ -2,7 +2,7 @@
 	<div id="my-carousel" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
             @foreach($slide as $item)
-			<li class="{{ $loop->iteration ==1 ? 'active' : '' }}" data-target="#my-carousel-{{ $loop->iteration }}" data-slide-to="{{ $loop->iteration }}" aria-current="location"></li>
+			<li class="{{ $loop->iteration ==1 ? 'active' : '' }}" data-target="#my-carousel" data-slide-to="{{ $loop->iteration }}" aria-current="location"></li>
             @endforeach
 
 		</ol>
@@ -13,8 +13,8 @@
 					<img src="{{ url('/').'/public/Image/'.$item->serviceImage }}" alt="">
 				</div>
 				<div class="carousel-caption d-none d-md-block">
-					<h5>Title</h5>
-					<p>Text</p>
+					<h5>{{ $item->serviceTitle }}</h5>
+					<p>{{ $item->serviceExcerpt }}</p>
 				</div>
 			</div>
             @endforeach

@@ -23,4 +23,15 @@ class HomeController extends Controller
         $service = ServiceModel::all();
         return view('front.index', compact('product', 'service', 'slide'));
     }
+
+    public function product()
+    {
+        $product = ProductModel::all();
+        return view('front.product', compact('product'));
+    }
+    public function service()
+    {
+        $service = ServiceModel::all();
+        return view('front.service', compact( 'service'));
+    }
 }
