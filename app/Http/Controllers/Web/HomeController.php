@@ -26,12 +26,24 @@ class HomeController extends Controller
 
     public function product()
     {
-        $product = ProductModel::all();
+        $product = ProductModel::paginate(2);
         return view('front.product', compact('product'));
     }
+
+    public function productDetail($id)
+    {
+        $product = ProductModel::find($id);
+        return view('front.product.detail',compact('product'));
+    }
+
     public function service()
     {
         $service = ServiceModel::all();
         return view('front.service', compact( 'service'));
+    }
+
+    public function serviceDetail($id) {
+        $product = ServiceModel::find($id);
+        return view('front.service.detail',compact('service'));
     }
 }

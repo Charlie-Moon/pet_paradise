@@ -1,9 +1,9 @@
 <section class="slider d-none d-md-block">
 	<div id="my-carousel" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
-            @foreach($slide as $item)
-			<li class="{{ $loop->iteration ==1 ? 'active' : '' }}" data-target="#my-carousel" data-slide-to="{{ $loop->iteration }}" aria-current="location"></li>
-            @endforeach
+        @foreach($slide as $item)
+					<li class="{{ $loop->iteration ==1 ? 'active' : '' }}" data-target="#my-carousel" data-slide-to="{{ $loop->iteration }}" aria-current="location"></li>
+        @endforeach
 
 		</ol>
 		<div class="carousel-inner">

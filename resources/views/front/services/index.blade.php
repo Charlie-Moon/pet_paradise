@@ -7,5 +7,11 @@
 
 		@include('front.partials.service')
 		
+		<div class="col-12">
+
+			{{ $service->links() }}
+
+		</div>
+
 	</div>
 @endsection

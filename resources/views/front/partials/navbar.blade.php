@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-white shadow-sm border-top-0 sticky-md-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Pet Paradise</a>
+    <a class="navbar-brand me-0" href="{{ url('/') }}">
+            <img src="{{ url('assets/img/pet-logo.png') }}" class="logo-lg" height="50" alt="{{ setting('app_name') }}">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

@@ -7,5 +7,10 @@
 
 		@include('front.partials.product')
 		
+		<div class="col-12">
+
+			{{ $product->links() }}
+
+		</div>
 	</div>
 @endsection

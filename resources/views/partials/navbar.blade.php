@@ -64,7 +64,7 @@
                    href="#"
                    id="navbarDropdown"
                    role="button"
-                   data-toggle="dropdown"
+                   data-bs-toggle="dropdown"
                    aria-haspopup="true"
                    aria-expanded="false">
                     <img src="{{ auth()->user()->present()->avatar }}"
@@ -72,7 +72,7 @@
                          height="50"
                          class="rounded-circle img-thumbnail img-responsive">
                 </a>
-                <div class="dropdown-menu mt-1 end-0 p-0" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu mt-1 end-0 p-0" aria-labelledby="navbarDropdown" style="left: unset">
                     <a class="dropdown-item py-2" href="{{ route('profile') }}">
                         <i class="fas fa-user text-muted me-2"></i>
                         @lang('My Profile')

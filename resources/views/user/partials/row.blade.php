@@ -25,7 +25,7 @@
         <div class="dropdown show d-inline-block">
             <a class="btn btn-icon"
                href="#" role="button" id="dropdownMenuLink"
-               data-toggle="dropdown"
+               data-bs-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-ellipsis-h"></i>
             </a>

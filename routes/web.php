@@ -43,8 +43,12 @@ Route::group(['middleware' => 'auth'], function () {
  * Public Routes
  */
 Route::get('/', 'HomeController@index')->name('home');
+
 Route::get('/products', 'HomeController@product')->name('home.products');
+Route::get('/products/{id}', 'HomeController@productDetail')->name('home.productDetail');
+
 Route::get('/service', 'HomeController@service')->name('home.service');
+Route::get('/service/{id}', 'HomeController@serviceDetail')->name('home.serviceDetail');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
 
@@ -81,7 +85,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
      */
 
     Route::group(['prefix' => 'profile', 'namespace' => 'Profile'], function () {
-        Route::get('/', 'ProfileController@show')->name('profile');
+        Route::get('/admin/dasboard', 'ProfileController@show')->name('profile');
         Route::get('activity', 'ActivityController@show')->name('profile.activity');
         Route::put('details', 'DetailsController@update')->name('profile.update.details');
 
