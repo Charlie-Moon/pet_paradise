@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('page-title', __('Service'))
-@section('page-heading', __('Service'))
 
 @section('breadcrumbs')
     <li class="breadcrumb-item active">
@@ -24,7 +23,7 @@
         @foreach($service as $item)
              <tr>
                 <td class="text-center">
-                  {{ $loop->iteration }}
+                  {{ $item->id }}
                 </td>
                 <td>
                   <div class="line-clamp-3">

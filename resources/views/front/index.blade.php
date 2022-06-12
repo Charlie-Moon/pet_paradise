@@ -4,9 +4,6 @@
 
 @section('content')
 
-<!-- Navbar --->
-@include('front.partials.navbar')
-
 <!-- Slider -->
 @include('front.partials.slide')
 <div class="py-4"></div>
@@ -63,18 +60,6 @@
 
 </section>
 
-<footer class="bg-white py-4">
-	<div class="container">
-		<div class="row">
-			<div class="col text-center">
-				{{-- <img src="" alt=""> --}}
-				<i class="fab fa-accusoft"></i>
-				<h3 class="mt-3">Welcome to Pet Paradise</h3>
-				&copy; copyright 2022
-			</div>
-		</div>
-	</div>
-</footer>
 @endsection
 
 @section('scripts')

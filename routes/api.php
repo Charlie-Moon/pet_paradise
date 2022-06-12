@@ -63,3 +63,6 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 
     Route::get('/countries', 'CountriesController@index');
 });
+
+
+Route::post('/contact', 'AjaxController@contact')->name('api.contact');

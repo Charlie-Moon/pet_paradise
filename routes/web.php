@@ -47,8 +47,12 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/products', 'HomeController@product')->name('home.products');
 Route::get('/products/{id}', 'HomeController@productDetail')->name('home.productDetail');
 
-Route::get('/service', 'HomeController@service')->name('home.service');
-Route::get('/service/{id}', 'HomeController@serviceDetail')->name('home.serviceDetail');
+Route::get('/services', 'HomeController@service')->name('home.service');
+Route::get('/services/{id}', 'HomeController@serviceDetail')->name('home.serviceDetail');
+
+Route::get('/contact', 'HomeController@contact')->name('home.contact');
+
+Route::get('/search', 'SearchController@index')->name('search');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
 

@@ -25,7 +25,7 @@
         @foreach($products as $item)
             <tr>
                 <td class="text-center">
-                  {{ $loop->iteration }}
+                  {{ $item->id }}
                 </td>
                 <td>
                   <div class="line-clamp-3">

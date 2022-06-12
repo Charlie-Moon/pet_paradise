@@ -1,7 +1,7 @@
 @foreach ($service as $item)
 
 		<div class="col">
-			<a href="/service/{{ $item->id }}" class="card">
+			<a href="/services/{{ $item->id }}" class="card">
 				<img class="card-img" src="{{ url('/').'/public/Image/'.$item->serviceImage }}" alt="{{ $item->serviceTitle }}">
 				<div class="card-img-overlay">
 					<h5 class="card-title">{{ $item->serviceTitle }}</h5>

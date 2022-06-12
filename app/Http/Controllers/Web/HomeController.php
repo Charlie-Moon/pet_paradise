@@ -38,12 +38,17 @@ class HomeController extends Controller
 
     public function service()
     {
-        $service = ServiceModel::all();
+        $service = ServiceModel::paginate(2);
         return view('front.service', compact( 'service'));
     }
 
     public function serviceDetail($id) {
-        $product = ServiceModel::find($id);
+        $service = ServiceModel::find($id);
         return view('front.service.detail',compact('service'));
     }
+    public function contact()
+    {
+        return view('front.contact.index');
+    }
+
 }

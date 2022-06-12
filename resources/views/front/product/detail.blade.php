@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('page-title', __('Pet Paradise - {{ $product->serviceTitle }}'))
+@section('page-title', $product->serviceTitle)
 
 @section('content')
 	<div class="container">

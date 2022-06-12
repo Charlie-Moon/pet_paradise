@@ -1,71 +1,95 @@
 [role="main"] {
-  padding-top: 95px;
+    padding-top: 95px;
 }
 
 .content-page {
-     margin-left: 250px;
-     overflow: hidden;
- }
+    margin-left: 250px;
+    overflow: hidden;
+}
 
 .sidebar-collapsed .content-page {
     margin-left: 80px;
 }
 
 label {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
-  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .slide {
-  img {
-    object-fit: cover;
-  }
-  .carousel-caption {
-    background-image: linear-gradient(to top, rgba(0,0,0, .5), rgba(0,0,0, .1));
-  }
+    img {
+        object-fit: cover;
+    }
+    .carousel-caption {
+        background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.1)
+        );
+    }
 }
 
-.services, .products {
-  margin-bottom: 1rem;
-  .title {
-    margin-bottom: 1.5rem;
-  }
-  .card-img-overlay {
-    color: #fff;
-    top: unset;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    flex-direction: column;
-    background-image: linear-gradient(to top, rgba(0,0,0, .5), rgba(0,0,0, .1));
-  }
+.services,
+.products {
+    margin-bottom: 1rem;
+    .title {
+        margin-bottom: 1.5rem;
+    }
+    .card-img-overlay {
+        color: #fff;
+        top: unset;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        flex-direction: column;
+        background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.1)
+        );
+    }
+}
+
+.page-detail {
+    margin-top: 2rem;
+    table {
+        @extend .table;
+        td {
+            border-bottom: none;
+            vertical-align: middle;
+        }
+    }
+}
+
+.search_page {
+    margin-top: 2rem;
 }
 
 @include media-breakpoint-down(md) {
-  .content-page {
-    margin-left: 0;
-  }
+    .content-page {
+        margin-left: 0;
+    }
 }
 @include media-breakpoint-up(md) {
-  .content-page {
-    width: calc(100% - 250px);
-  }
+    .content-page {
+        width: calc(100% - 250px);
+    }
 }
 @include media-breakpoint-between(lg, xl) {
-  .widget {
-    height: 128px;
+    .widget {
+        height: 128px;
 
-    .row .text-muted {
-      width: 80px;
-      text-align: right;
-      word-wrap: normal;
+        .row .text-muted {
+            width: 80px;
+            text-align: right;
+            word-wrap: normal;
+        }
     }
-  }
 }

@@ -37,14 +37,15 @@
     }
 
     .form-control {
-        padding: .75rem 1rem;
+        padding: 0.75rem 1rem;
         border-width: 0;
         border-radius: 0;
     }
 
     .navbar-collapse {
         background-color: #ffffff;
-        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06),
+            0 1px 0 0 rgba(0, 0, 0, 0.02);
 
         &.collapse.show,
         &.collapsing {
@@ -70,5 +71,26 @@
         @include media-breakpoint-down(md) {
             border-right: 0;
         }
+    }
+}
+.nav-front {
+    .nav-link {
+        &.active {
+            border-bottom: 5px solid $primary;
+        }
+    }
+    .form-control {
+        border-radius: $border-radius-pill 0 0 $border-radius-pill;
+        border-width: 1px;
+    }
+    .btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+@include media-breakpoint-up(md) {
+    .nav-link {
+        --bs-nav-link-padding-y: 29px;
+        --bs-navbar-nav-link-padding-x: 15px;
     }
 }
