@@ -71,6 +71,9 @@ label {
 .search_page {
     margin-top: 2rem;
 }
+.ratio > * {
+    object-fit: cover;
+}
 
 @include media-breakpoint-down(md) {
     .content-page {
